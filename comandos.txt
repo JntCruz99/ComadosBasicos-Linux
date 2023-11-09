@@ -1,0 +1,47 @@
+#Atualizar o sistema
+
+sudo apt update
+sudo apt upgrade
+
+#Instalar programas
+
+sudo apt install vlc
+
+#Remover programas
+
+sudo apt remove vlc
+
+#Pesquisar por programas disponíveis
+
+apt search nome_do_programa
+
+#Gerenciar serviços
+
+sudo systemctl restart apache2
+
+#Navegar pelo sistema de arquivos
+
+cd nome_da_pasta
+ls
+ls -l
+pwd
+
+#Criar e manipular diretórios e arquivos
+
+mkdir meudiretorio
+touch meuarquivo.txt
+
+#Copiar e mover arquivos
+
+cp arquivo.txt pasta_destino/
+mv arquivo.txt novo_nome.txt
+
+#Editar arquivos de texto
+
+nano arquivo.txt
+vim arquivo.txt
+
+#criar a senha do root
+
+sudo passwd root
+
