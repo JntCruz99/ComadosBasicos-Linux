@@ -45,3 +45,22 @@ vim arquivo.txt
 
 sudo passwd root
 
+#finalizar todos processos
+
+killall chrome
+
+#comando pode ser utilizado para adicionar o usuários mariana aos grupos adm e sudo
+
+usermod -G adm,sudo mariana
+
+#adicionar usuario
+
+useradd carlos
+
+#excluir user
+
+userdel -r -f mariana
+
+#dar permissão de gravação, alteração e execução para o dono, grupo e demais usuários para o arquivo carta.txt
+
+chmod 777 carta.txt
