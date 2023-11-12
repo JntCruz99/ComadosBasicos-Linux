@@ -1,0 +1,47 @@
+#crie um diretorio para o disco
+
+sudo mkdir disk2
+
+#criar uma partição
+
+sudo fdisk /dev/sdb
+
+#monte o disco na partição criada
+
+sudo mount -t ext4 /dev/sdb1 /disk2
+
+
+#criar um servidor de arquivos para windows
+
+sudo apt install samba -y
+
+#criar uma pasta no diretorio
+
+mkir publica 
+
+#passar as permissoes da pasta 
+
+chmod 777 publica
+
+#configurar samba
+
+nano /etc/samba/smb.conf
+
+#dentro do smb.config
+
+[publica]
+
+path = /disk2/publica
+writable = yes
+guest ok = yes
+guest only = yes
+
+#restartar o samba
+
+systemctl restart smbd
+
+#deixa o serviço subir apos reiniciar o servidor
+
+systemctl enable smbd
+
+
